@@ -1,11 +1,13 @@
 
 # Create Multiple Deployments Using Helm
 
-This project covers the step by step guide to containerize and deploy a Ruby on Rails (RoR) application on Kubernetes using Helm.
+In this project, we'll use Helm 3 to deploy a Ruby on Rails (RoR) application on a Kubernetes cluster.
+
+We'll use a published Helm chart to deploy the database and create our own custom Helm chart to deploy the frontend.
+
+Finally, we'll use ConfigMaps to share common information between different Services.
 
 The application is located in the `/usercode/elearning` directory and is ready to use.
-
-This application provides search functionality and enables users to search for courses. These courses are stored and fetched from a PostgreSQL database.
 
 ## DevOps Tools / Service Used
 + Docker
@@ -24,10 +26,6 @@ To deploy the Application on Docker, Kubernetes and Helm, we have the following 
 
 + Install and configure [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
-
-
-## How to work
-
 ### Task 1: Create a Cluster
 
 To run Kubernetes, we need a cluster. A **cluster** is a group of computers working together that can be viewed as a single system.
@@ -39,7 +37,7 @@ Kubernetes provides several distributions to create a cluster. We can create a K
 + Docker Desktop
 + kubeadm
 
-For this project, i will use a `kind` cluster.
+For this project, we will use a `kind` cluster.
 
 For this task, perform the following steps:
 
